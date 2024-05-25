@@ -37,7 +37,7 @@ onAuthStateChanged(auth, (user) => {
             });
     } else {
         console.log("User not signed in");
-        window.location.href = '../../../login.html';
+        window.location.href = '../../../index.html';
     }
 });
 
@@ -45,7 +45,7 @@ const logoutButton = document.getElementById('logout');
 logoutButton.addEventListener('click', () => {
     signOut(auth)
         .then(() => {
-            window.location.href = '../../../login.html';
+            window.location.href = '../../../index.html';
         })
         .catch((error) => {
             console.error('Error signing out:', error);
